@@ -22,10 +22,12 @@ namespace fastmodemultiplier
                 Logger.LogWarning("Speed Multiplier was less than one, which is not yet supported. Defaulting to 1f.");
                 speedMultiplier.Value = 1f;
             }
-            
-            HarmonyInstance = new Harmony("justastranger.fastmodemultiplier");
-            HarmonyInstance.PatchAll();
-            Logger.LogInfo("Harmony Patch Applied");
+            if (speedMultiplier.Value > 1f)
+            {
+                HarmonyInstance = new Harmony("justastranger.fastmodemultiplier");
+                HarmonyInstance.PatchAll();
+                Logger.LogInfo("Harmony Patch Applied");
+            }
         }
     }
 
