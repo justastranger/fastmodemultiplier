@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CultSimTestMod 4.6.1", "CultSimTestMod 4.6.1\CultSimTestMod 4.6.1.csproj", "{9E977E2A-7440-4CF9-937A-F75FE7D09B9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fastmodemultiplier", "CultSimTestMod 4.6.1\fastmodemultiplier.csproj", "{9E977E2A-7440-4CF9-937A-F75FE7D09B9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
