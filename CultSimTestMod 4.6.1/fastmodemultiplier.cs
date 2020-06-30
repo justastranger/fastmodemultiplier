@@ -10,18 +10,16 @@ namespace fastmodemultiplier
     {
 
         public static ConfigEntry<float> speedMultiplier;
-        public static fastmodemultiplier INSTANCE;
-        // private static Heart tabletopManagerHeart;
+        Harmony HarmonyInstance;
 
+        // stuff to do right away
         void Awake()
         {
-            // stuff to do right away
             speedMultiplier = Config.Bind("Speed", "Multiplier", 1.0f, "Speed multiplier for fast mode.");
-            Logger.LogInfo("Configuration Loaded.");
-            Logger.LogInfo("Speed Multiplier set to: " + speedMultiplier.Value.ToString());
-            INSTANCE = this;
-            var harmony = new Harmony("justastranger.fastmodemultiplier");
-            harmony.PatchAll();
+            Logger.LogInfo("Configuration Loaded. Speed Multiplier set to: " + speedMultiplier.Value.ToString());
+
+            HarmonyInstance = new Harmony("justastranger.fastmodemultiplier");
+            HarmonyInstance.PatchAll();
             Logger.LogInfo("Harmony Patch Applied");
         }
     }
